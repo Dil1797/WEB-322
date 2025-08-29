@@ -1,0 +1,62 @@
+.threeDchewy {
+    text-align: center;  /* Centers text horizontally */
+    color: green;        /* Sets text color to green */
+    margin-top: 20px;    /* Adds some space from the top */
+    font-size: 5rem;   /* Makes the text bigger */
+    text-shadow: 3px 3px 5px rgba(17, 71, 43, 0.5); /* Add shadow */
+}
+
+/* Style the image container */
+.image-box {
+    margin-top: -260px; /* Move the container UP */
+    max-width: 400px;
+    height: 32vh; /* Adjust height */
+    padding: 20px;
+    background-color: white;
+    border: 5px solid hwb(144 12% 63%);
+    box-shadow: 0 0 14px 4px hwb(139 16% 57%);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-left: auto; /* This centers only the main container */
+    margin-right: auto; /* Centers the main container */
+}
+
+/* Style the image */
+.image-box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.selection-section {
+    font-size: 1.25rem;
+    margin-left: 60px; /* Moves everything inside this div to the right */
+}
+
+.submit-btn {
+    position: relative;
+    left: 40px; /* Move right */
+    border: 3px solid rgb(12, 121, 12); /* Change border color */
+    border-radius: 8px;
+    padding: 10px 20px;
+    background-color: white;
+    color: rgb(26, 136, 54);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px; /* Moves the button down by 20px */
+}
+
+.submit-btn:hover {
+    background-color: lightblue;
+    border-color: darkblue;
+}
+
+.image-name {
+    text-align: center; /* Center the image name */
+    margin-top: 80px;    /* Add space between the image and the name */
+    font-size: 1.4rem;   /* Adjust font size if needed */
+    color: #333;         /* Set a color for the image name */
+}
+
+label:hover {
+    color: #4CAF50;  /* Change text color when hovering over the label */
+}
