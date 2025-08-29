@@ -1,0 +1,47 @@
+<h1 class="threeDchewy">Food Image</h1>
+
+<!-- Form for selecting an image -->
+<form method="post" action="/">
+    <div class="classselection">
+        <input type="radio" name="rdoImage" id="rdoImageBanana" value="Banana">
+        <label for="rdoImageBanana">Banana</label><br>
+        
+        <input type="radio" name="rdoImage" id="rdoImageBurger" value="Burger">
+        <label for="rdoImageBurger">Burger</label><br>
+        
+        <input type="radio" name="rdoImage" id="rdoImageIcePops" value="IcePops">
+        <label for="rdoImageIcePops">IcePops</label><br>
+        
+        <input type="radio" name="rdoImage" id="rdoImageIceTea" value="IceTea"> 
+        <label for="rdoimageIceTea">IceTea</label><br>
+        
+        <input type="radio" name="rdoImage" id="rdoImageJuice" value="Juice"> 
+        <label for="rdoimageJuie">Juice</label><br>
+        
+        <input type="radio" name="rdoImage" id="rdoImageKiwi" value="Kiwi"> 
+        <label for="rdoimageKiwi">Kiwi</label><br>
+        
+        <input type="radio" name="rdoImage" id="rdoImageOrange" value="Orange"> 
+        <label for="rdoimageOrange">Orange</label><br>
+        
+        <input type="radio" name="rdoImage" id="rdoImageSandwich" value="Sandwich"> 
+        <label for="rdoimageSandwich">Sandwich</label><br>
+        
+        <input type="radio" name="rdoImage" id="rdoImageStrawberry" value="Strawberry"> 
+        <label for="rdoimageStrawberry">Strawberry</label><br>
+        
+        <input type="radio" name="rdoImage" id="rdoImageHotDog" value="HotDog"> 
+        <label for="rdoimageHotDog">HotDog</label><br>
+
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+<!-- Image Container -->
+<div class="image-container">
+    <img src="/images/{{selectedImage}}" alt="No Image" />
+</div>
+
+<div class="clsImageName">
+    {{selectedImageName}}
+</div>
