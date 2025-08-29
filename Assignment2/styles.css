@@ -1,0 +1,169 @@
+.threeDchewy {
+    text-align: center;  /* Centers text horizontally */
+    color: green;        /* Sets text color to green */
+    margin-top: 20px;    /* Adds some space from the top */
+    font-size: 3rem;   /* Makes the text bigger */
+    text-shadow: 3px 3px 5px rgba(17, 71, 43, 0.5); /* Add shadow */
+}
+
+/* Style the image container */
+.image-box {
+    margin-top: -450px; /* Move the container UP */
+    max-width: 400px;
+    height: 32vh; /* Adjust height */
+    padding: 20px;
+    background-color: white;
+    border: 5px solid hwb(144 12% 63%);
+    box-shadow: 0 0 14px 4px hwb(139 16% 57%);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-left: auto; /* This centers only the main container */
+    margin-right: auto; /* Centers the main container */
+}
+
+/* Style the image */
+.image-box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.selection-section {
+    font-size: 1.25rem;
+    margin-right: 1500px; /* Moves everything inside this div to the right */
+}
+
+.radio-label {
+    display: flex; /* Using flex for radio button and label */
+    align-items: center; /* Vertically align items */
+}
+
+.submit-btn {
+    position: relative;
+    left: 40px; /* Move right */
+    border: 3px solid rgb(12, 121, 12); /* Change border color */
+    border-radius: 8px;
+    padding: 10px 20px;
+    background-color: white;
+    color: rgb(26, 136, 54);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px; /* Moves the button down by 20px */
+}
+
+.submit-btn:hover {
+    background-color: lightblue;
+    border-color: darkblue;
+}
+
+.image-name {
+    text-align: center; /* Center the image name */
+    margin-top: 80px;    /* Add space between the image and the name */
+    font-size: 1.4rem;   /* Adjust font size if needed */
+    color: #333;         /* Set a color for the image name */
+}
+
+label:hover {
+    color: #4CAF50;  /* Change text color when hovering over the label */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.name-header {
+    margin-top: 50px;
+    font-size: 40px;
+    color: #066407; /* Light grey-blue color */
+}
+
+.login-container {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 5px;
+    border: 4px solid #0a4419;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px; /* Set a specific width */
+    height: 350px;
+}
+
+h2 {
+    color: #055e0c;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    display: block;
+    width: 80%;
+    max-width: 300px; /* Ensures a consistent width */
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #07570c;
+    border-radius: 4px;
+}
+
+.submit-button, .register-btn {
+    display: block;                /* Keeps the buttons block-level items */
+    width: 80%;                   /* Sets width to 80% of the parent container */
+    max-width: 325px; 
+    height: 45px; /* Set a specific height */            /* Caps the max width */
+    padding: 15px;                /* Increase padding for a more box-like appearance */
+    margin: 10px auto;            /* Centers the button */
+    border: 2px solid #0a4419;    /* Add border color and width */
+    border-radius: 4px;           /* Rounded corners */
+    background-color: #b0c4c4;    /* Button background color */
+    color: white;                 /* Text color */
+    cursor: pointer;              /* Change cursor to pointer on hover */
+    font-size: 16px;              /* Font size */
+    text-align: center;           /* Centers text inside the button */
+}
+
+.submit-button:hover {
+    background-color: #045009;    /* Darker shade on hover */
+    border-color: #0a4419;        /* Darker border on hover */
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.logout-link {
+    position: relative; /* Position relative to allow absolute positioning */
+    color: rgb(7, 91, 43); /* Default color for the username */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* Hide the username initially */
+.logout-link .user-name {
+    visibility: visible; /* Initially visible */
+    opacity: 1; /* Fully visible */
+    transition: visibility 0s, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Set up for the hover effect */
+.logout-link:hover .user-name {
+    visibility: hidden; /* Hide the username on hover */
+    opacity: 0; /* Fade out */
+}
+
+/* Show "Logout" text on hover with pseudo-element */
+.logout-link::after {
+    content: "Logout"; /* Text that will be displayed on hover */
+    position: absolute; /* Position relative to the link */
+    top: 0; /* Align with the top of the link */
+    left: 0; /* Align to the left */
+    color: rgb(7, 91, 43); /* Same color for the logout text */
+    visibility: hidden; /* Hide initially */
+    opacity: 0; /* Start invisible */
+    transition: visibility 0s, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Show "Logout" text on hover */
+.logout-link:hover::after {
+    visibility: visible; /* Make visible when hovered */
+    opacity: 1; /* Fade in */
+}

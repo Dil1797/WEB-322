@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+<body>
+        <h1 class="threeDchewy">Dil Humyra Sultana Borna</h1> 
+
+    <a href="/logout" class="logout-link">
+    <span class="user-name">{{userName}}</span> <!-- This will be hidden on hover -->
+    </a>
+    <div class="container">
+        <!-- Selection Section -->
+        <div class="selection-section">
+            
+            <form action="/image" method="post">  <!-- Changed to POST -->
+                {{#each images}}
+                    <div class="radio-label"> <!-- Added this div for alignment -->
+                        <input type="radio" name="image" value="{{this}}" id="{{this}}" aria-label="{{removeExtension this}}">
+                        <label for="{{this}}">{{removeExtension this}}</label>
+                    </div><br>
+                {{/each}}
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery-section">
+
+            <div class="image-box">
+                <img src="/images/{{#if selectedImage}}{{selectedImage}}{{else}}Gallery.jpg{{/if}}" alt="Selected Image"
+                     onerror="this.src='/images/Gallery.jpg'">  <!-- Error Handling for missing images -->
+            </div>
+
+            {{#if selectedImage}}
+                <p class="image-name">{{removeExtension selectedImage}}</p>
+            {{/if}}
+
+        </div>
+    </div>
+</body>
+</html>
