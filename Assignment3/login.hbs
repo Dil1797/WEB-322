@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+<body>
+
+    <!-- Name at the Top -->
+    <h1 class="name-header">{{name}}</h1>
+
+    <!-- Login Form Container -->
+    <div class="login-container">
+        <h2>Login</h2>
+
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Username" class="input-box" required>
+            <input type="password" name="password" placeholder="Password" class="input-box" required>
+            <button type="submit" class="submit-button">Submit</button>
+            <button type="register" class="register-btn">Register</button>
+
+            <!-- Error Message Below Submit Button -->
+            {{#if error}}
+                <p class="error-message">{{error}}</p>
+            {{/if}}
+        </form>
+    </div>
+
+</body>
+</html>

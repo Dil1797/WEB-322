@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    {{> header }}  <!-- header partial -->
+
+    <div class="gallery-section">
+        <div class="image-centerer">
+            <div class="image-box">
+                <!-- Image -->
+                <img src="/images/{{image.FILENAME}}" alt="Image Preview" class="order-image">
+
+                <!-- Title, Description, Price -->
+                <p class="image-name">{{removeExtension image.FILENAME}}</p>
+                <p class="image-description">{{image.DESCRIPTION}}</p>
+                <p class="image-price">CAD ${{image.PRICE}}</p>
+
+                <!-- Buttons -->
+                <div class="order-buttons">
+                    <!-- BUY Button with form -->
+                    <form action="/buy" method="POST" onsubmit="return confirmPurchase();" style="display: inline;">
+                        <input type="hidden" name="filename" value="{{image.FILENAME}}">
+                        <button type="submit" class="submit-btn">Buy</button>
+                    </form>
+
+                    <!-- CANCEL Button -->
+                    <button class="submit-btn" onclick="cancelAndReturn('{{image.FILENAME}}')">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Script -->
+    <script>
+        function confirmPurchase() {
+            alert("Purchase successful!");
+            return true;
+        }
+
+        function cancelAndReturn(filename) {
+            alert("May Be next time!");
+            window.location.href = `/gallery?image=${encodeURIComponent(filename)}`;
+        }
+    </script>
+</body>
+</html>
