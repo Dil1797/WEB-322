@@ -1,0 +1,94 @@
+* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Container styling for the form */
+.form-container {
+  width: 30%;
+  height: 300px;
+  margin: 4px auto;
+  padding: 20px;
+  background-color: white;
+  border: 5px solid #dcd662;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* Styling the form */
+.form-container form {
+  width: 100%;
+  display: flex;                     /* Flex layout for radio buttons and country names */
+  flex-direction: column;            /* Stack the items vertically */
+  justify-content: flex-start;
+}
+
+/* Style the individual label elements */
+.form-container form label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;     /* Align radio button to the left and country name to the right */
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+/* Add a 1px line under each country label */
+.form-container form label:not(:last-child) {
+  border-bottom: 2px solid #bab5b5;     /* Add a 1px line separating each label except the last one */
+}
+
+/* Align the radio buttons to the left */
+.form-container form input[type="radio"] {
+  margin-right: 10px; /* Space between radio button and country name */
+}
+
+button {
+  width: 435px;       /* Set a specific width for the button */
+  padding: 5px 10px;
+  font-size: 1.2em;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+h2, h3 {
+  color: #000000;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+h3 {
+  margin-top: 20px;
+}

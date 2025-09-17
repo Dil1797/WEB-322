@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Sales by Country</title>
+  <link rel="stylesheet" href="/styles.css"> <!-- Link to external CSS (you can add this later) -->
+</head>
+<body>
+  <h1>ars</h1>
+
+  <!-- The form for selecting a country -->
+  <div class="form-container">
+    <form action="/submit" method="POST">
+      <div>
+        {{#each countries}}
+          <label>
+            <input type="radio" name="country" value="{{this}}" required>
+            <span>{{this}}</span> <!-- Country name on the right -->
+          </label>
+        {{/each}}
+      </div>
+
+      <!-- Only show the submit button if no country has been selected yet -->
+      {{#unless selectedCountry}}
+        <button type="submit" disabled>Submit</button>
+      {{/unless}}
+    </form>
+
+    <!-- Display selected country, brands, and total cars sold directly in the same container -->
+    {{#if selectedCountry}}
+      <h2>Selected Country: {{selectedCountry}}</h2>
+
+      <h3>Brands and Sales:</h3>
+      <ul>
+        {{#each cars}}
+          <li>{{brand}} - Sold: {{sold}}</li> <!-- List car brands and their sales -->
+        {{/each}}
+      </ul>
+
+      <h3>Total Cars Sold: {{totalSold}}</h3> <!-- Show the total number of cars sold in that country -->
+    {{/if}}
+  </div>
+
+  <script>
+    // Enable the submit button when a country is selected
+    const submitButton = document.querySelector('button[type="submit"]');
+    document.querySelectorAll('input[type="radio"]').forEach(input => {
+      input.addEventListener('change', () => {
+        submitButton.disabled = false;  // Enable submit button once a radio button is selected
+      });
+    });
+  </script>
+</body>
+</html>
